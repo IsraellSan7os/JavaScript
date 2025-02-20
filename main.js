@@ -1,1 +1,0 @@
-window.alert("Meu primeiro comando com javaScript")
