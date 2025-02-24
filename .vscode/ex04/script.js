@@ -11,6 +11,7 @@ function somar() {
     // Faz a soma do elementos
     let resultado = n1 + n2
 
+    // Recebe os elementos e exibe os resultados
     var res = window.document.getElementById('resultado')
     res.innerText = ` A soma entre os numero ${n1} + ${n2} = ${resultado}`
 
