@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        div#clicou {
+            margin: 2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            background-color: green;
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="clicou" onclick="clicar()">
+        Eventos de clique
+    </div>
+
+
+    <script>
+
+        const global = window.document.getElementById('clicou')
+        global.addEventListener('click', clicar)
+        global.addEventListener('mouseenter', entra)
+        global.addEventListener('mouseout', sair)
+
+        function clicar() {
+            global.innerText = 'Clicou'
+            global.style.background = 'red'
+            global.style.color = 'black'
+        }
+
+        function entra() {
+            global.innerText = 'Entrou la ele'
+            global.style.color = 'ffff'
+        }
+
+        function sair() {
+            global.innerText = 'Saio'
+            global.style.background = 'green'
+           
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
