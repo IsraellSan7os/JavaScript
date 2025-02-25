@@ -33,7 +33,7 @@ function calcularMedia() {
     }
 }
 
-// Adicionando o evento ao botão de envio Chegui nesse ponto nao sabia como fazer, para que os resutados fosse exibido na tela
+// Adicionando o evento ao botão de envio Cheguei nesse ponto nao sabia como fazer, para que os resutados fosse exibido na tela
 document.querySelector("button").addEventListener("click", function(event) {
     event.preventDefault(); // Evita o recarregamento da página
     calcularMedia()
