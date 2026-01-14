@@ -18,7 +18,7 @@ function variavelVar() {
 
 }
 
-function variavelLet(){
+function variavelLet() {
     // Declara uma variável sem valor
     let user
     console.log(user)
@@ -32,4 +32,19 @@ function variavelLet(){
 
 }
 
-variavelLet()
+function variavelConst() {
+    // Constante ela não pode ser alterada
+
+    const number = 42
+    console.log(number)
+
+
+    // Irá ferar um erro, pois o valor não pode ser alterado.
+    number = 45
+    console.log(number)
+    
+
+}
+
+variavelConst()
+
