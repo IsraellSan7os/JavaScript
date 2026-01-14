@@ -42,9 +42,32 @@ function variavelConst() {
     // Irá ferar um erro, pois o valor não pode ser alterado.
     number = 45
     console.log(number)
-    
+
 
 }
 
-variavelConst()
+function tiposDeDados() {
+    // String
 
+    let userName = "Anne"
+    console.log(userName)
+
+    // Usando o typeof  da pra saber qual tipo primitivo esta sendo passado
+    console.log(typeof userName)
+
+    // Number
+    console.log(typeof 5)
+
+    //Número reais ou float
+    console.log(typeof 124.70)
+
+    // Boolean
+    console.log(true)
+    console.log(false)
+
+    let loguin = true
+    console.log(typeof loguin)
+}
+
+
+tiposDeDados()
