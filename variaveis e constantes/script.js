@@ -107,7 +107,90 @@ function operadoresAritmeticos() {
 }
 
 
-operadoresAritmeticos()
+function operadoreIncrement() {
+    let number = 10
+    // Incremento
+    number = number + 1
+    console.log(number)
+
+    number++
+    console.log("Incrementa depois ", number)
+
+    ++number
+    console.log("Incrementa antes ", number)
+
+    let num = 10
+    //Decremento
+    number = num + 1
+    console.log(num)
+
+    num++
+    console.log("Incrementa depois ", number)
+
+    ++num
+    console.log("Incrementa antes ", number)
+
+}
+
+function ordemPrecedência() {
+    /*
+    ==============================
+     PRECEDÊNCIA DE OPERADORES JS
+    ==============================
+    
+    Nível 7 (ALTO) — Exponenciação
+    **   → Ex: 2 ** 3
+    
+    Nível 6 — Multiplicação / Divisão / Resto
+    *   → multiplicação
+    /   → divisão
+    //  → (não existe em JS, apenas em outras linguagens)
+    %   → resto da divisão
+    
+    Nível 5 — Adição e Subtração
+    +   → soma
+    -   → subtração
+    
+    Nível 4 — Operadores Relacionais (comparação)
+    ==   → igual (com conversão de tipo)
+    !=   → diferente (com conversão de tipo)
+    ===  → igual estrito
+    !==  → diferente estrito
+    <=   → menor ou igual
+    >=   → maior ou igual
+    >    → maior que
+    <    → menor que
+    
+    Nível 3 — Operador Lógico
+    !    → NOT (negação)
+    
+    Nível 2 — Operador Lógico
+    &&   → AND (e)
+    
+    Nível 1 (BAIXO) — Operador Lógico
+    ||   → OR (ou)
+    
+    ==============================
+     DICA IMPORTANTE
+    ==============================
+    Use parênteses () para deixar
+    a lógica mais clara e evitar
+    erros de precedência.
+    */
+
+    let totall = 20 + (10 - 20) * 2 / 4
+    console.log(totall)
+
+
+}
+
+function IgualDiferente(){
+
+    let one = 1 
+    let two = 2
+
+    // == igual
+}
 
 
 
