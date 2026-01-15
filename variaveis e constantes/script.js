@@ -69,5 +69,45 @@ function tiposDeDados() {
     console.log(typeof loguin)
 }
 
+function operadoresAritmeticos() {
+    // soma
+    console.log("Soma:", 12 + 8)
+    let num = 12
+    let num1 = 3
+    const res = num + num1
+    console.log(res)
 
-tiposDeDados()
+    // Subtração
+    console.log("Subtração:", 10 - 5)
+
+    let sub = 12
+    let sub1 = 3
+    const subRes = num + num1
+    console.log(subRes)
+
+    // Multiplicação
+    console.log("Multiplicação", 2 * 20)
+    let mul = 10
+    let mult = 2
+    const multRes = mul * mult
+    console.log(multRes)
+
+
+    // Divisão
+    console.log("Divisão:", 20 / 2)
+    let div = 10
+    let divi = 3
+    const diviRes = div / divi
+    console.log(diviRes)
+
+    // Resto da Divisão 
+    console.log("Resto da Divisão ", 15 % 2)
+    console.log("Multiplicação", 3 ** 3)
+
+}
+
+
+operadoresAritmeticos()
+
+
+
