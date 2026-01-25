@@ -241,4 +241,34 @@ function menorMaiorIgual() {
     // Menor igaul a 
 }
 
-menorMaiorIgual()
+// Operadores Lógicos
+/*
+    AND (E) &&
+    OR (OU) ||
+    NOT (Negação) !
+*/
+
+function operadoresLogicos() {
+    let email = true
+    let password = true
+    let adim = false
+
+    // AND (E) &&
+    // Preciso que as duas condições sejá verdadeira
+    let res = email && password && adim
+    console.log(res)
+
+    // OR (OU) ||
+    // So precisa de um verdadeiro 
+    let loguin = email || adim
+    console.log(loguin)
+
+
+    //  NOT (Negação) !
+    // Se for verdadeiro ele converte pra falso, e se for falso ele converte pra verdadeiro
+    console.log(!adim)
+    console.log(!email)
+}
+
+operadoresLogicos()
+
