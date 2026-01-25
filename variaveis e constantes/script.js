@@ -184,13 +184,38 @@ function ordemPrecedência() {
 
 }
 
-function IgualDiferente(){
+function IgualDiferente() {
 
-    let one = 1 
+    let one = 1
     let two = 2
 
     // == igual
+    console.log("### Igual A ###")
+    console.log(one == two)
+    // Existe uma diferença Aquei ele esta olhando pro conteudo e não pro type 
+    console.log(two == "2")
+
+    console.log("### Difrente de ###")
+    console.log(two != one)
+    // Existe uma diferença Aquei ele esta olhando pro conteudo e não pro type 
+    console.log(two != "2")
 }
 
 
+IgualDiferente()
 
+// Estritamente Igual e Diferente
+
+function estritamente() {
+    let one = 1
+    let two = 2
+
+    console.log(one === two)
+    console.log(one === 1)
+
+    console.log(two !== one)
+    console.log(two === 2)
+    console.log(one !== "1")
+}
+
+estritamente()
