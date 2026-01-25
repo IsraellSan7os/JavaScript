@@ -202,7 +202,6 @@ function IgualDiferente() {
 }
 
 
-IgualDiferente()
 
 // Estritamente Igual e Diferente
 
@@ -218,4 +217,28 @@ function estritamente() {
     console.log(one !== "1")
 }
 
-estritamente()
+
+
+// Maior, Menor e Igual
+
+function menorMaiorIgual() {
+    let balance = 5000
+    console.log("Saldo", balance)
+    var payment = 400
+    console.log("Pagamento", payment)
+
+    // > Maior que 
+    console.log("O saldo da minha empresa é maior que o meu pagamento", balance > payment)
+
+    // < menor
+    console.log("O saldo da minha empresa é menor que o meu pagamento", balance < payment)
+
+    // Maior igual a
+    console.log("O saldo da minha empresa é maior ou igual", balance >= payment)
+    // Menor igual
+    console.log("O saldo da minha empresa é menor ou igual", balance <= payment)
+
+    // Menor igaul a 
+}
+
+menorMaiorIgual()
