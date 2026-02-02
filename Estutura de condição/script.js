@@ -28,3 +28,35 @@ console.log("Israel" ? "Verdadeiro" : "Falso")
 console.log(-1 ? "Verdadeiro" : "Falso")
 console.log(Infinity ? "Verdadeiro" : "Falso")
 console.log(-Infinity ? "Verdadeiro" : "Falso")
+
+
+// if  (SE)
+
+console.log("### Estrutura de condição if ###")
+let hour = 11
+if (hour <= 12) {
+    console.log("Bom dia!")
+}
+var idade = 35
+if (idade >= 18 && idade <= 35) {
+    console.log("Jovem ")
+}
+
+var idade = 2
+if (idade < 18 || idade > 65) {
+    console.log("fique em casa!")
+}
+
+console.log("### Estrutura de condição if else ###")
+
+const dia = 19
+
+if (dia >= 6 && dia <= 12.30) {
+    console.log("Bom dia!")
+} else if (dia >= 12.31 && dia <= 18.59) {
+    console.log("Boa Tarde!")
+} else if (dia >= 19 && dia <= 23.59) {
+    console.log("Boa noite!")
+} else {
+    console.log("Boa Madrugada!")
+}
