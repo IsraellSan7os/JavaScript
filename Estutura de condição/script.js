@@ -60,3 +60,23 @@ if (dia >= 6 && dia <= 12.30) {
 } else {
     console.log("Boa Madrugada!")
 }
+
+// Switch
+
+let option = 1
+const atendimentoHumano = 10
+
+switch (option) {
+    case 1: console.log("Deseja consultar alguem ?")
+        if (atendimentoHumano >= 8 && atendimentoHumano <= 18) {
+            console.log("Transferindo para um atendente humano")
+        } else {
+            console.log("Atendimento humano indisponível")
+        }
+        break
+    case 2: console.log("Segunda via do boleto")
+        break
+    case 3: console.log("Antendimento humano")
+        break
+    default: console.log("Opção inválida")
+}
