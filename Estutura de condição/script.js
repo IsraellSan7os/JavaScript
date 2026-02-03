@@ -80,3 +80,46 @@ switch (option) {
         break
     default: console.log("Opção inválida")
 }
+
+// Tratamento de Exceções
+
+
+/*
+Uma exeção é uma condição ou evento imprevisto que ocorre durante o uso da aplicação,
+que interrompe o fluxo normal de execução do código.
+
+Essa situação inesperada pode incliur erros, 
+condição de falha ou eventos que a aplicação não está preparada para lidar.
+                            não
+--------tray --Deu certo? ---------> catch
+                sim
+
+                try → tenta conectar
+
+se falhar → cai no catch
+você não mostra o erro técnico pro usuário
+retorna uma mensagem amigável
+*/
+
+try {
+    // Neste campo ele tenta execurtar algo
+    console.log(result)
+} catch (error) {
+    // console.log(error)
+    // Aqui ele trata o erro
+    // Ele decide o que vai fazer, não so apenas mostra mensagem de erro
+} finally {
+    // “aconteça o que acontecer, isso aqui vai rodar”
+    // Pra que servi??
+
+    /*
+fechar conexão com banco
+fechar arquivo
+liberar memória
+parar loading
+registrar log
+resetar estado 
+*/
+
+    console.log("Finalizou o processo")
+}
