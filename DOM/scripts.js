@@ -44,7 +44,7 @@ const selecionandoELementos = () => {
 
 const manipulandoElementos = () => {
     const guest = document.querySelector("#guest-1")
-    
+
     // Retorna o conteúdo que esta no html
     console.log(guest.textContent)
     // Altera o conteúdo da spam 
@@ -55,4 +55,27 @@ const manipulandoElementos = () => {
     console.log(guest.innerHTML)  //Retorna o Html como texto
 }
 
-manipulandoElementos()
+const alterandoEstilos = () => {
+    const input = document.querySelector("#name")
+
+    // Add element of css
+    input.classList.add("input-error")
+
+    // remove element of css
+    input.classList.remove("input-error")
+
+    //if tha class already exists he remove, If the class doesn't exist, it adds it.
+    input.classList.toggle("input-error")
+
+    //Modifying properties css
+    const button = document.querySelector("button")
+    button.style.backgroundColor = "yellow"
+    button.style.color = "black"
+
+    const body = document.querySelector("body")
+    body.style.backgroundColor = "#ffff"
+
+}
+
+
+alterandoEstilos()
