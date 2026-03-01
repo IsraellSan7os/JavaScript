@@ -95,4 +95,16 @@ const criandoElementos = () => {
 
 }
 
-criandoElementos()
+
+const manipulandoAtributos = () => {
+    const input = document.querySelector("input")
+
+    // Atualizar um atributo 
+
+    input.setAttribute("disabled", true)
+
+    // Posso manipular os atributos, modificar os types
+    input.setAttribute("type", "checkbox")
+}
+
+manipulandoAtributos()
