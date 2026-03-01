@@ -78,4 +78,21 @@ const alterandoEstilos = () => {
 }
 
 
-alterandoEstilos()
+const criandoElementos = () => {
+    const guest = document.querySelector("ul")
+
+    const newGuest = document.createElement("li")
+    newGuest.classList.add("guest")
+    const guestName = document.createElement("span")
+
+    guestName.textContent = "Anne"
+
+    //  Append prepend toFixed 
+    newGuest.append(guestName)
+    guest.append(newGuest)
+    console.log(newGuest)
+
+
+}
+
+criandoElementos()
