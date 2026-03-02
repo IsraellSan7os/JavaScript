@@ -107,4 +107,22 @@ const manipulandoAtributos = () => {
     input.setAttribute("type", "checkbox")
 }
 
-manipulandoAtributos()
+
+const event = () => {
+    window.addEventListener("load", () => {
+        console.log("The page has been recharged")
+    })
+
+
+    // tem varios tipos de eventos
+    // Tipos diferente de eventos cada um com sua pecurialidade
+    window.addEventListener("click", (e) => {
+
+        e.preventDefault()
+
+        // 
+        console.log(e)
+    })
+}
+
+event()
