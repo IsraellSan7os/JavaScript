@@ -135,4 +135,17 @@ const eventosDeFormulario = () => {
     })
 }
 
-eventosDeFormulario()
+
+const eventosDeInput = function(){
+    const input = document.querySelector("input")
+    // Keydown, quando atecla é pressionada 
+    input.addEventListener("keydown", (event) =>{
+        event.preventDefault()
+        console.log(event)
+    })
+
+
+
+}
+
+eventosDeInput()
