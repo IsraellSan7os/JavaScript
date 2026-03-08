@@ -138,13 +138,22 @@ const eventosDeFormulario = () => {
 
 const eventosDeInput = function(){
     const input = document.querySelector("input")
-    // Keydown, quando atecla é pressionada 
+    // Keydown, quando atecla é pressionada  (Captura tudo incluindo CTRL, SHIFT, etc)
     input.addEventListener("keydown", (event) =>{
-        event.preventDefault()
-        console.log(event)
+        // event.preventDefault()
+        // console.log(event)
     })
 
+    // Keypress - quando uma tecla do tipo caractere é precionada (Letras, números, ponto, etc)
+    input.addEventListener("keypress", (event) =>{
+        console.log(event.key)
+    }  )
 
+    // onchange
+
+    input.onchange = () =>{
+        console.log("Saio do input")
+    }
 
 }
 
