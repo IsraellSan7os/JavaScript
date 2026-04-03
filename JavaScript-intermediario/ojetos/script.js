@@ -70,3 +70,43 @@ console.log(product.name);
 
 product["quality"] = 50;
 console.log(product);
+
+product["anne"] = 97;
+console.log(product);
+
+/*Nesta aula, aprenderemos o conceito de Optional Chaining no JavaScript,
+  um recurso útil para acessar propriedades de objetos de forma segura,
+   evitando erros caso a propriedade não exista. Veremos na prática como
+   utilizar o Optional Chaining para acessar propriedades e métodos de
+    objetos de forma condicional, garantindo que não ocorram exceções
+     caso a propriedade não exista. Este recurso é especialmente útil
+      ao lidar com objetos que possuem propriedades opcionais.s */
+
+function OptionalChaining() {
+  let user = {
+    id: 1,
+    name: "Israel",
+    last_name: "Santos",
+    // address: {
+    //   street: "Cidadão jão novais",
+    //   city: "São Paulo",
+    //   geo: {
+    //     latitude: 15.3455,
+    //     longitude: 17.123,
+    //   },
+    // },
+
+    message: function () {
+      console.log("Propriedade do usuário", this.user.id);
+    },
+  };
+
+  console.log("-----------------------------------------");
+  console.log("Nome:", user.name);
+  console.log("Sobrenome:", user.last_name);
+  // console.log("Endereço:", user.address.street);
+  // console.log("Cidade:", user.address.city);
+  console.log("Endereço completo",user?.address?.street)
+}
+
+OptionalChaining();
