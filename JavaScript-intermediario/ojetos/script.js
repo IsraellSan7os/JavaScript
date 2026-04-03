@@ -33,4 +33,40 @@ console.log(user.address);
 console.log(user.name.first_name);
 
 // Executando o metodo do objeto
-user.message()
+user.message();
+
+const valores = {
+  num1: 2,
+  num2: 4,
+  nome: "Israel",
+  esposa: "Anne cleide",
+
+  mensagemSoma: function () {
+    console.log(this.num1 + this.num2, `Ola ${this.nome}`);
+    console.log(`Ola ${this.esposa}`);
+
+    console.log(valores.nome);
+
+    return this.mensagemSoma;
+  },
+};
+
+valores.mensagemSoma();
+
+const product = {
+  name: "teclado",
+  quality: 100,
+};
+
+console.log(product.name);
+// Atualizado o valor de uma propriedade
+product.quality = 99;
+console.log(product.quality);
+
+// Podemos alterar tambem o nome
+console.log(product.name);
+product.name = "Mause";
+console.log(product.name);
+
+product["quality"] = 50;
+console.log(product);
