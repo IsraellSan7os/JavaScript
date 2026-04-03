@@ -128,3 +128,92 @@ function OperadorDe_Coalescência_Nula() {
 console.log("-----------------------------------------");
 
 OperadorDe_Coalescência_Nula();
+
+function função_construtora() {
+  function creatProduct(name, amount, price) {
+    const product = {};
+
+    product.name = name;
+    product.amount = amount;
+    product.price = price;
+
+    product.details = function () {
+      console.log(`Nome: ${this.name}`);
+      console.log(`Quantidade: ${this.amount}`);
+      console.log(`Preço: ${this.price}`);
+    };
+
+    return product;
+  }
+
+  return creatProduct;
+}
+console.log("-----------------------------------------");
+
+const Product = função_construtora();
+
+const product1 = new Product("Motor", 500, "R$ 5.100 ");
+console.log(
+  `Prça: ${product1.name} | Quantidade: ${product1.amount} | peças Preço: ${product1.price} `,
+);
+
+const product2 = new Product("Volante", 1000, "R$ 2.000");
+console.log(
+  `Prça: ${product2.name} | Quantidade: ${product2.amount} | peças Preço: ${product2.price} `,
+);
+
+function createMaterial(cimento, area, brita, pedra) {
+  const produtos = {};
+  produtos.cimento = cimento;
+  produtos.area = area;
+  produtos.brita = brita;
+  produtos.pedra = pedra;
+
+  produtos.detailss = function () {
+    console.log(`Cimento: ${this.cimento}`);
+    console.log(`Areia: ${this.area}`);
+    console.log(`Brita: ${this.brita}`);
+    console.log(`Pedra: ${this.pedra}`);
+  };
+
+  return produtos;
+}
+console.log("-----------------------------------------");
+
+let material1 = new createMaterial(
+  "1 Saco",
+  "1 Metro de areia",
+  "1 Metro de bitra",
+  "1 Metro de Pedra",
+);
+console.log(material1.cimento);
+material1.detailss();
+
+function pecas_celular() {
+  function creatProduct(tela, bateria, botao, processador) {
+    const product = {};
+
+    product.tela = tela;
+    product.bateria = bateria;
+    product.botao = botao;
+    product.processador = processador;
+
+    product.details = function () {
+      console.log(`Tela: ${this.tela}`);
+      console.log(`Bateria: ${this.bateria}`);
+      console.log(`Botão: ${this.botao}`);
+      console.log(`Processador: ${this.processador}`);
+    };
+
+    return product;
+  }
+
+  return creatProduct; 
+}
+
+console.log("-----------------------------------------");
+
+const pro = pecas_celular();
+const cel1 = pro("100", "200", "400", "500"); 
+
+cel1.details();
