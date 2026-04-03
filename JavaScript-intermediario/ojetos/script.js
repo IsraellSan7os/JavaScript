@@ -82,7 +82,7 @@ console.log(product);
      caso a propriedade não exista. Este recurso é especialmente útil
       ao lidar com objetos que possuem propriedades opcionais.s */
 
-function OptionalChaining() {
+function Optional_Chaining() {
   let user = {
     id: 1,
     name: "Israel",
@@ -106,7 +106,25 @@ function OptionalChaining() {
   console.log("Sobrenome:", user.last_name);
   // console.log("Endereço:", user.address.street);
   // console.log("Cidade:", user.address.city);
-  console.log("Endereço completo",user?.address?.street)
+  console.log("Endereço completo", user?.address?.street);
 }
 
-OptionalChaining();
+Optional_Chaining();
+// Operador ?? (Coalescência Nula)
+// Retorna o valor da direita quando o da esquerda for null ou undefined
+// Muito usado pra definir valores padrão sem afetar 0, false ou ""
+function OperadorDe_Coalescência_Nula() {
+  let content = undefined;
+  console.log(content ?? "Conteúdo padrão");
+
+  const user = {
+    name: "Israel",
+    avatar: "Foto do avatar",
+  };
+
+  console.log(user.avatar ?? "default.png");
+  console.log(user.name);
+}
+console.log("-----------------------------------------");
+
+OperadorDe_Coalescência_Nula();
