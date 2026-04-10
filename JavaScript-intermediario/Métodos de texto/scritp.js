@@ -29,3 +29,25 @@ function ObtendoComprimentString() {
 }
 
 ObtendoComprimentString();
+
+function SubstituindoFatiandoTexto() {
+  let message = "Estou estudando os funcamentos do javaScript";
+  // Substituindo partes de um texto.
+  console.log(message.replace("javaScript", "html"));
+
+  // Extraindo uma parte da string (start, end)
+  console.log(message.slice(6, 30));
+
+  // Extraindo uma parte da sting de trá pra frente
+  console.log(message.slice(-11));
+
+  console.log("*******************************************");
+
+  // Remove os espaçoes
+  let texWithSpace = "          Texto de exemplo           ";
+  console.log("Tamanho ", texWithSpace.length);
+  let remove = texWithSpace.trim();
+  console.log("Sem os espaços", remove.length);
+}
+
+SubstituindoFatiandoTexto();
