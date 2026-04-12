@@ -112,8 +112,28 @@ function cartao() {
   let r = num.split(",");
   let join = r.join(" - ");
   console.log(join);
-  let restt = join.padEnd(15, "#")
- 
+  let restt = join.padEnd(15, "#");
+
   console.log(`Cartão:`, restt);
 }
 cartao();
+
+console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+function encontrandoConteúdoTexto() {
+  let message = "Estou estudando os fundamentos do javaScript";
+
+  // Óbtendo a posição da palavra
+  // Caso a palavra não sejá encontrada ele retorna -1
+  var res = message.indexOf("fundamentos");
+  console.log(`A palavra [estudando enta na posição ${res}]`);
+
+
+  // verificação se existe a palavra na string
+  // Se a palava existe, retorna true, caso o contrario retorna false
+  // Lembrando que o js é case sensitive
+  console.log(message.includes("Estou"))
+  console.log(message.includes("javaScript"))
+}
+
+encontrandoConteúdoTexto();
