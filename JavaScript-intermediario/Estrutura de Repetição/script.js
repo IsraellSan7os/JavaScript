@@ -60,21 +60,124 @@ function exercicios() {
     console.log(`${numTabuada} X ${tabuada} = ${res}`);
     tabuada++;
   }
+
+  console.log("Faça um código que mostre TODAS as tabuadas de 1 até 5");
+  let i = 1;
+
+  while (i <= 5) {
+    let ta = 1;
+
+    while (ta <= 10) {
+      let resultado = i * ta;
+      console.log(`${i} x ${ta} = ${resultado}`);
+      ta++;
+    }
+
+    console.log("-------------");
+
+    i++;
+  }
 }
 exercicios();
-console.log("Faça um código que mostre TODAS as tabuadas de 1 até 5");
-let i = 1;
 
-while (i <= 5) {
-  let ta = 1;
+/*
+Do while -> repete até que a condição especificada seja VERDADEIRA.
+  No entanto, a instrução será executada pelo menos uma vez antes da
+  condição ser cerificada 
+*/
+console.log("-------------");
+function do_While() {
+  let value = 0;
+  do {
+    value++;
+    console.log(`Numero: ${value}`);
+  } while (value <= 11);
+}
+do_While();
 
-  while (ta <= 10) {
-    let resultado = i * ta;
-    console.log(`${i} x ${ta} = ${resultado}`);
-    ta++;
+// For repete até que a condição especifica seja falsa.
+
+// for (step = 0; step <= 10; step++) {
+//   console.log("Step", step);
+// }
+
+console.log("------------");
+var forEX = function () {
+  for (i = 0; i <= 10; i++) {
+    console.log(`Numero: ${i}`);
   }
 
-  console.log("-------------");
+  let num = 7;
+  for (tab = 0; tab <= 10; tab++) {
+    let res = tab * num;
+    console.log(`${num} X ${tab} = ${res}`);
+  }
+};
+forEX();
 
-  i++;
+// For in
+function for_in() {
+  // Objeto
+  let person = {
+    name: "Israel",
+    surname: "Santos",
+    emial: "ysraelsantos@gmail.com",
+  };
+
+  for (let index in person) {
+    console.log(person);
+    console.log(person[index]);
+  }
+  console.log("-----##############-----");
+  // Array
+  let students = ["Anne", "João", "Helena", "Dani"];
+  for (index in students) {
+    console.log(index);
+    console.log(students[index]);
+    index++;
+  }
 }
+
+for_in();
+
+// For of
+
+let students = ["Anne", "João", "Helena", "Dani"];
+for (index of students) {
+  console.log(index);
+}
+
+// for...in → percorre os ÍNDICES (ou chaves)
+// mais usado em objetos ou quando precisa da posição
+
+// for...of → percorre os VALORES direto
+// mais usado em arrays (mais simples e comum)
+
+// Breack
+
+for (let i = 0; i <= 10; i++) {
+  if (i === 5) {
+    break;
+  }
+  console.log("Breack", i);
+}
+
+for (let i = 0; i <= 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  console.log("Continui", i);
+}
+
+/*
+=== Estruturas de Repetição em JavaScript ===
+
+while      -> executa enquanto a condição for verdadeira
+do while   -> executa pelo menos uma vez antes de verificar a condição
+for        -> loop com início, condição e incremento definidos na mesma linha
+for in     -> percorre os índices (chaves) de arrays ou propriedades de objetos
+for of     -> percorre os valores de arrays ou iteráveis
+
+break      -> interrompe totalmente o loop
+continue   -> pula a iteração atual e continua o loop
+*/
