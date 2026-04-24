@@ -96,10 +96,44 @@ function dataHora() {
     console.log(`${day}/${month}/${year} as ${hour}:${minute}`);
   };
 
+  const convertendo_Data_pra_sting = () => {
+    const date = new Date("2012-01-02T15:20:00");
+    //Convete pra string
+    date.toString();
+
+    // Exibe somente a hora
+    let hour = date.toTimeString();
+    console.log(hour);
+
+    // Exibe somente a data
+    let dt = date.toDateString();
+    console.log(dt);
+  };
+
+  //Exibindo data e hora formatadas de acordo com a localidade
+
+  const exibindo_formatadas_localidade = () => {
+    console.log("Exibindo data e hora formatadas de acordo com a localidade");
+    const date = new Date("2014-07-03T12:20:00");
+
+    // Exibindo formatado de acode com o pais
+    // Brasil
+    let brasil_date = date.toLocaleDateString("pt-BR");
+    let brasil_hour = date.toLocaleTimeString("pt-BR");
+    console.log(`Data do brasil ${brasil_date} Hora do brasil ${brasil_hour}`);
+
+    // Estados unidos
+    let usa_date = date.toLocaleDateString("en");
+    let usa_hour = date.toLocaleTimeString("en");
+    console.log(`Data do USA ${usa_date} Hora do USA ${usa_hour}`);
+  };
+
   selecionando_Data_Hora();
   obtendo_Cada_Valor();
   modificando_Data_Hora();
   formatando_Date_Hora();
+  convertendo_Data_pra_sting();
+  exibindo_formatadas_localidade();
   //   setFullYear, setMonth, setDate para alterar o ano, mês e dia. Para modificar a hora, usaremos setHours, setMinutes e setSeconds.
 }
 dataHora();
