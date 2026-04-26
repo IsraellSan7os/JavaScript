@@ -128,12 +128,67 @@ function dataHora() {
     console.log(`Data do USA ${usa_date} Hora do USA ${usa_hour}`);
   };
 
+  const recursos_data_hora = () => {
+    let date = new Date();
+    console.log("##################");
+
+    console.log(date.toLocaleString("en"));
+
+    // Mosta a date e hora em style diferentes.
+    console.log(
+      date.toLocaleString("pt-BR", {
+        dateStyle: "short",
+      }),
+    );
+
+    // Date por estenço
+    console.log(
+      date.toLocaleString("pt-BR", {
+        dateStyle: "long",
+      }),
+    );
+
+    console.log(
+      date.toLocaleString("pt-BR", {
+        dateStyle: "medium",
+      }),
+    );
+
+    console.log(
+      date.toLocaleString("pt-BR", {
+        dateStyle: "full",
+      }),
+    );
+
+    // Formatando date
+
+    let format = date.toLocaleString("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "2-digit",
+
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+    console.log(format);
+
+    let amout = 12.5;
+    let res = amout.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+    console.log(`Sue saldo da conta é ${res}R$`);
+  };
+
   selecionando_Data_Hora();
   obtendo_Cada_Valor();
   modificando_Data_Hora();
   formatando_Date_Hora();
   convertendo_Data_pra_sting();
   exibindo_formatadas_localidade();
+  recursos_data_hora();
+
   //   setFullYear, setMonth, setDate para alterar o ano, mês e dia. Para modificar a hora, usaremos setHours, setMinutes e setSeconds.
 }
 dataHora();
