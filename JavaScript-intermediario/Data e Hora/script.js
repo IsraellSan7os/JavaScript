@@ -181,6 +181,31 @@ function dataHora() {
     console.log(`Sue saldo da conta é ${res}R$`);
   };
 
+  const conhecendo_intl = () => {
+    // Intl é a API de internacionalização do ECMAScript
+
+    // Obtendo informações da localidade
+    const currentLocale = Intl.DateTimeFormat().resolvedOptions();
+    console.log(currentLocale);
+
+    function formatDate(locale) {
+      const date = new Date();
+      return date.toLocaleString(locale);
+    }
+
+    // Exibe no fomato de acordo com a localidade
+    console.log(formatDate("pt-BR"));
+    console.log(formatDate("en-US"));
+    console.log(formatDate("en-GB"));
+    console.log(formatDate("ja-JP"));
+
+    // Obtém a diferença de tempo
+    const date = new Date();
+    console.log(date.getTimezoneOffset());
+    let format = date.getTimezoneOffset() / 60;
+    console.log(format);
+  };
+
   selecionando_Data_Hora();
   obtendo_Cada_Valor();
   modificando_Data_Hora();
@@ -188,6 +213,7 @@ function dataHora() {
   convertendo_Data_pra_sting();
   exibindo_formatadas_localidade();
   recursos_data_hora();
+  conhecendo_intl();
 
   //   setFullYear, setMonth, setDate para alterar o ano, mês e dia. Para modificar a hora, usaremos setHours, setMinutes e setSeconds.
 }
