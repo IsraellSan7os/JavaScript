@@ -105,17 +105,43 @@ const fild = function () {
 // O metodo every testa se todas os elementos do array passam na condição
 // e retorna um valor Boolean.
 const every = function () {
-
   // Aqui ele vai restorna falso pois tem um valor menor que 18
   const ages = [15, 30, 39, 29];
   const result = ages.every((age) => age >= 18);
   console.log(result);
 
-  const fruts = ["Abacaxi", "Abacaxi", "Abacaxi", "Abacaxi"]
-  const i = fruts.every((f)=> f.includes("Abacaxi"))
-  console.log(i)
+  const fruts = ["Abacaxi", "Abacaxi", "Abacaxi", "Abacaxi"];
+  const i = fruts.every((f) => f.includes("Abacaxi"));
+  console.log(i);
 };
+// O método some() testa se ao menos um dos elementos no array
+// passa na condição e retorna um valor true ou falso.
+const some = function () {
+  const ages = [15, 30, 80, 20];
+  const resutl = ages.some((age) => age < 18);
+  console.log("Same", resutl);
+};
+
+const Inreduce = function () {
+  const values = [1, 2, 3, 4];
+  const sum = values.reduce((accumulator, currentValue, index) => {
+    console.log("Acumulador", accumulator);
+    console.log("Current value", currentValue);
+    console.log("Index", index);
+
+    console.log("Soma", accumulator + currentValue);
+    console.log("##########");
+
+    return accumulator + currentValue;
+  }, 0);
+  return sum;
+};
+
+
+
 map();
 filter();
 fild();
 every();
+some();
+Inreduce();
